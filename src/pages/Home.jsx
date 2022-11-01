@@ -23,12 +23,13 @@ const Home = () => {
     fetch(query)
       .then((res) => {
         if (!res.ok) {
-          throw new Error("something went wrong");
+          throw new Error("something went wrong") && alert("Please search a mealtype");
+         
         }
         return res.json();
       })
       .then((data) => setInfo(data.hits))
-      .catch((err) => console.log(err));
+      .catch((err) => console.log(err) );
   };
 
   return (
@@ -39,7 +40,7 @@ const Home = () => {
       <div className="m-5">
         <Header setValue={setValue} setMeal={setMeal} getInfo={getInfo} />
       </div>
-      <div className="d-flex flex-wrap">
+      <div className="d-flex flex-wrap w-100 border">
       {info?.map((data, index) => {
         return <div key={index}>{<Card data={data} />}</div>;
       })}

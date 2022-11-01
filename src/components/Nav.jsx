@@ -14,7 +14,7 @@ const Nav = () => {
       <div className="d-flex ">
 
       <div className="m-2">
-          <NavLink  className="text-decoration-none text-light" to="/home">
+          <NavLink   className="text-decoration-none text-light" to="/home">
             Home
           </NavLink>
         </div>

@@ -9,11 +9,11 @@ const Card = ({ data}) => {
 
   return (
     <div className="container row m-2">
-      <div className="col-8 m-2"
+      <div style={{ width: "300px", height: "300px" }} className=" col-8 m-2 shadow p-2 mb-5 bg-secondary rounded d-flex flex-column align-items-center"
        type="button" >
         <img
-          style={{ width: "400px", height: "400px" }}
-          className="rounded-2"
+          // 
+          className=" w-75 rounded-2"
           src={recipe.image}
           alt=""
           onClick={() => navigate(`/home/${recipe.calories}`,{state:recipe})}
