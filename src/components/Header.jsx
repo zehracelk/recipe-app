@@ -2,10 +2,10 @@ import React from "react";
 
 const Header = ({ setValue, setMeal,getInfo }) => {
   return (
-    <div className="d-flex justify-content-center rounded-2 w-75">
-      <div className="w-50 mx-2">
+    <div className="d-flex row justify-content-center rounded-2 w-75">
+      <div className="col-sm-4 col-lg-4 col-md-4  col-xl-4 col-12 mx-2">
         <input
-        className="border w-100 rounded-2 bg-secondary text-light p-1"
+        className="border rounded-2 bg-secondary text-light p-1"
           type="text"
           placeholder="search"
           onChange={(e) => {
@@ -14,11 +14,12 @@ const Header = ({ setValue, setMeal,getInfo }) => {
           }}
         />
       </div>
-      <div className="w-50">
-        <button className="w-100 border border-dark rounded-2 p-1" onClick={() => getInfo()}>Search</button>
+      <div className="col-sm-4 col-lg-4 col-md-4 col-xl-4  col-12 ">
+        <button className="w-100 border border-dark rounded-2 p-1 " onClick={() => getInfo()}>Search</button>
       </div>
-      <div className="mx-2 w-50 p-2">
-        <select className="w-100" name="meal" onChange={(e) => setMeal(e.target.value)}>
+      <div className="col-sm-4 col-lg-4 col-md-4 col-xl-4  col-12 mx-2 p-2">
+        <select className=" text-secondary" name="meal" onChange={(e) => setMeal(e.target.value)}>
+          <option className="text-secondary" value=""><p className="text-secondary">search meal type</p></option>
           <option value="breakfast">Breakfast</option>
           <option value="brunch">Brunch</option>
           <option value="lunch/dinner">Lunch/Dinner</option>

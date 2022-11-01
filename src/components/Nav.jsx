@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import def from "../assets/default-image.jpg";
 
 const Nav = () => {
@@ -12,10 +12,19 @@ const Nav = () => {
     <div className="d-flex "> <span><h3>R</h3></span> ECIPE <br/> HOME</div>
       </div>
       <div className="d-flex ">
+
+      <div className="m-2">
+          <NavLink  className="text-decoration-none text-light" to="/home">
+            Home
+          </NavLink>
+        </div>
+
+
+
         <div className="m-2">
-          <Link className="text-decoration-none text-light" to="/about">
+          <NavLink  className="active:black text-decoration-none text-light" to="/about">
             About
-          </Link>
+          </NavLink>
         </div>
         <div className="m-2">
           <a
@@ -26,9 +35,9 @@ const Nav = () => {
           </a>
         </div>
         <div className="m-2">
-          <Link className="text-decoration-none text-light" to="/">
+          <NavLink className="text-decoration-none text-light" to="/">
             Log Out
-          </Link>
+          </NavLink>
         </div>
       </div>
     </div>

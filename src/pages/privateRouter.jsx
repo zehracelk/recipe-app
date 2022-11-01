@@ -1,13 +1,17 @@
 import { Navigate, Outlet } from "react-router-dom";
-import { useState } from "react";
+import { useEffect,useState } from "react";
+
 
 
 
 const PrivateRouter = () => {
 
+  const [user,setUser] = useState([]);
 
- const user = JSON.parse( localStorage.getItem("USER"));
+useEffect(()=>{
+  setUser( JSON.parse( localStorage.getItem("USER")));
 
+},[]);
 
   return(
    <div>

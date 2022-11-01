@@ -5,6 +5,7 @@ import About from './pages/About';
 import Login from './pages/Login';
 import PrivateRouter from './pages/privateRouter';
 import Register from './pages/Register';
+import Details from './pages/Details';
 
 
 
@@ -17,6 +18,8 @@ function App() {
         <Route path='/about' element={<About />}></Route>
         <Route path='/' element={<Login />} />
         <Route path='/register' element={<Register/>}></Route>
+        <Route path='/home/:calories' element={<Details/>}></Route>
+
 
         <Route path='/home' element={<PrivateRouter />}>
           <Route path='/home' element={<Home />}></Route>

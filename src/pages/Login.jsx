@@ -23,7 +23,7 @@ const Login = () => {
     if (findedUser) {
       localStorage.setItem("USER", JSON.stringify(users));
       navigate("/home");
-    }
+    } else{alert("Invalid username or password")}
   };
 
   console.log(user);
@@ -56,7 +56,10 @@ const Login = () => {
       </div>
 
       <div className="p-3">
-        <button className=" button button-danger px-4 py-2 rounded-2" onClick={() => handleClick()}>
+        <button
+          className=" button button-danger px-4 py-2 rounded-2"
+          onClick={() => handleClick()}
+        >
           Login
         </button>
       </div>
